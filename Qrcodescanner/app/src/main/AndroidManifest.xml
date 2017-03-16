@@ -12,6 +12,12 @@
         <activity android:name="com.example.keith.qrcodescanner.StaffStart"></activity>
         <activity android:name="com.example.keith.qrcodescanner.StaffSignin"></activity>
         <activity android:name="com.example.keith.qrcodescanner.Staffoptions2"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.StaffSignout"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.Addperson"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.Location"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.View"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.Removemember"></activity>
+        <activity android:name="com.example.keith.qrcodescanner.Confirm"></activity>
         <activity android:name="com.example.keith.qrcodescanner.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

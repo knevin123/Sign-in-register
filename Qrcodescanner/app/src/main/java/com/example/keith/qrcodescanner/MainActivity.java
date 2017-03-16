@@ -1,6 +1,7 @@
 package com.example.keith.qrcodescanner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -81,6 +82,7 @@ public class MainActivity extends Activity {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 final String[] id = {new String()};
                 if (barcodes.size() != 0) {
+
                     barcodeInfo.post(new Runnable() {    // Use the post method of the TextView
                         public void run() {
                             barcodeInfo.setText(    // Update the TextView
@@ -91,9 +93,19 @@ public class MainActivity extends Activity {
                             {
                                 Toast.makeText(getApplicationContext(),
                                         "qr code scanned", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, Confirm.class);
+                                startActivity(intent);
                             }
                         }
                     });
+                    id[0] =barcodes.valueAt(0).displayValue;
+                    if(barcodes.valueAt(0).displayValue == id[0])
+                    {
+                        Toast.makeText(getApplicationContext(),
+                                "qr code scanned", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, Confirm.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
