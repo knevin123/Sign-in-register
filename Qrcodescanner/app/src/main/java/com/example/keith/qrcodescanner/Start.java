@@ -13,7 +13,7 @@ public class Start extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        Button button = (Button)findViewById(R.id.other);
+        Button button = (Button)findViewById(R.id.admin);
         button.setOnLongClickListener(
                 new Button.OnLongClickListener() {
                     public boolean onLongClick(View v) {
